@@ -1,0 +1,167 @@
+:root {
+  color-scheme: only light;
+  --paper: #ffffff;
+  --text: #1a1a1a;
+  --muted: #999;
+  --border: #e5e5e5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 3rem;
+}
+
+/* Back link */
+.back-link {
+  position: fixed;
+  top: 1rem;
+  left: 1.2rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  z-index: 10;
+}
+
+.back-link:hover {
+  opacity: 1;
+  color: var(--text);
+}
+
+/* Header */
+.more-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.more-logo {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.8rem;
+  opacity: 0.9;
+}
+
+.more-subtitle {
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Project list */
+.more-list {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 1px;
+}
+
+.project-card {
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.4rem;
+  gap: 1rem;
+}
+
+.card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.2rem;
+}
+
+.card-desc {
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.card-link {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.9rem;
+  border-radius: 1px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.card-link:hover {
+  color: var(--text);
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--paper);
+}
+
+/* Footer decoration */
+.more-footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footer-deco {
+  width: 100px;
+  height: auto;
+  opacity: 0.25;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1.5rem 0.8rem 2rem;
+  }
+
+  .more-logo {
+    width: 150px;
+  }
+
+  .project-card {
+    padding: 1rem 1rem;
+  }
+
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-desc {
+    font-size: 0.7rem;
+  }
+
+  .card-link {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.7rem;
+  }
+}

@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+
+# Local env
+.env
+.env.*
+
+# Local AI tool settings
+**/.claude/settings.local.json
